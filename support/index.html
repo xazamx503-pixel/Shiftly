@@ -3,51 +3,45 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#07040d">
-<meta name="description" content="Shiftly">
-<title>Help & Support — Shiftly</title>
+<meta name="theme-color" content="#050807">
+<title>Shiftly — Help &amp; Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
 </head>
-<body><div class="app-shell">
-<div class="topbar">
-  <a class="icon-btn" href="../" aria-label="Back">
-    <span class="arrow lang-en">‹</span><span class="arrow lang-ar">›</span>
-  </a>
-  <div class="title"><span class="lang-en">Help & Support</span><span class="lang-ar">المساعدة والدعم</span></div>
-  <button class="lang-btn" id="langBtn" onclick="toggleLang()" aria-label="Change language">ع</button>
-</div>
-<section class="doc lang-en">
-<h1>Help & Support</h1>
-<div class="meta">Shiftly Support</div>
-<h2>Contact Support</h2>
-<p>Email us at <a class="inline" href="mailto:Shiftlysp@hotmail.com?subject=Shiftly%20Support">Shiftlysp@hotmail.com</a>.</p>
-<p>Please include a short description of the issue and, when useful, your app version and device model. Do not send your password.</p>
-<a class="support-cta" href="mailto:Shiftlysp@hotmail.com?subject=Shiftly%20-%20Problem%20Report">Report a Problem</a>
-<h2>Account deletion</h2>
-<p>You can delete your account directly in Shiftly: <strong>Profile → Delete Account</strong>. The app will ask you to confirm before proceeding.</p>
-<h2>Privacy requests</h2>
-<p>For access, correction, deletion, or other privacy-related questions, see <a class="inline" href="../privacy-choices/">Privacy Choices</a> or email Shiftly Support.</p>
-<h2>Useful links</h2>
-<p><a class="inline" href="../privacy/">Privacy Policy</a> · <a class="inline" href="../terms/">Terms of Use</a></p>
+<body>
+<div class="screen">
+<header class="header">
+  <a class="backBtn" href="../" aria-label="Back"><span class="backArrow" data-en>‹</span><span class="backArrow" data-ar>›</span></a>
+  <div class="headerTitle"><span data-en>Help &amp; Support</span><span data-ar>المساعدة والدعم</span></div>
+  <div class="headerSpacer"></div>
+</header>
+<main class="content">
+<section class="hero">
+  <div class="heroTitle rtl-text"><span data-en>How can we help?</span><span data-ar>كيف نقدر نساعدك؟</span></div>
+  <div class="heroBody rtl-text"><span data-en>Find quick answers about your schedule, cloud sync, notifications, and account.</span><span data-ar>تلقى هنا إجابات سريعة عن جدولك والمزامنة والتنبيهات والحساب.</span></div>
 </section>
-
-<section class="doc lang-ar">
-<h1>المساعدة والدعم</h1>
-<div class="meta">دعم Shiftly</div>
-<h2>التواصل مع الدعم</h2>
-<p>راسلنا على <a class="inline" href="mailto:Shiftlysp@hotmail.com?subject=Shiftly%20Support">Shiftlysp@hotmail.com</a>.</p>
-<p>اذكر وصفًا مختصرًا للمشكلة، وعند الحاجة إصدار التطبيق ونوع الجهاز. لا ترسل كلمة المرور.</p>
-<a class="support-cta" href="mailto:Shiftlysp@hotmail.com?subject=Shiftly%20-%20Problem%20Report">الإبلاغ عن مشكلة</a>
-<h2>حذف الحساب</h2>
-<p>تقدر تحذف حسابك مباشرة من Shiftly: <strong>الملف الشخصي ← حذف الحساب</strong>. سيطلب التطبيق منك التأكيد قبل تنفيذ الحذف.</p>
-<h2>طلبات الخصوصية</h2>
-<p>لطلب الوصول أو التصحيح أو الحذف أو أي سؤال متعلق بالخصوصية، راجع <a class="inline" href="../privacy-choices/">خيارات الخصوصية</a> أو تواصل مع دعم Shiftly.</p>
-<h2>روابط مفيدة</h2>
-<p><a class="inline" href="../privacy/">سياسة الخصوصية</a> · <a class="inline" href="../terms/">شروط الاستخدام</a></p>
-</section>
-
-<div class="footer">
-  <div>© 2026 Shiftly. All rights reserved.</div>
-  <div class="made">Made by Azzam</div>
+<div class="sectionLabel"><span data-en>SUPPORT</span><span data-ar>الدعم</span></div>
+<div class="card">
+  <a class="item helpItem" href="mailto:Shiftlysp@hotmail.com?subject=Shiftly%20Support%20Request"><div class="itemTitle rtl-text"><span data-en>Contact Support</span><span data-ar>التواصل مع الدعم</span></div><div class="itemBody rtl-text" style="color:var(--primary)">Shiftlysp@hotmail.com</div></a>
+  <a class="item helpItem" href="mailto:Shiftlysp@hotmail.com?subject=Shiftly%20-%20Problem%20Report"><div class="itemTitle rtl-text"><span data-en>Report a Problem</span><span data-ar>الإبلاغ عن مشكلة</span></div><div class="itemBody rtl-text"><span data-en>Send a problem report directly to Shiftly Support.</span><span data-ar>أرسل بلاغ المشكلة مباشرة إلى دعم Shiftly.</span></div></a>
 </div>
-</div><script src="../app.js"></script></body></html>
+<div class="sectionLabel"><span data-en>FREQUENTLY ASKED</span><span data-ar>أسئلة شائعة</span></div>
+<div class="card">
+  <div class="item helpItem"><div class="itemTitle rtl-text"><span data-en>How does Shiftly know my work days?</span><span data-ar>كيف يعرف Shiftly أيام دوامي؟</span></div><div class="itemBody rtl-text"><span data-en>Shiftly uses your rotation and cycle start date to calculate your work and off days.</span><span data-ar>يستخدم Shiftly الروتيشن وتاريخ بداية الدورة لحساب أيام الدوام والراحة.</span></div></div>
+  <div class="item helpItem"><div class="itemTitle rtl-text"><span data-en>Where do my shift times come from?</span><span data-ar>من وين يأخذ Shiftly أوقات دوامي؟</span></div><div class="itemBody rtl-text"><span data-en>The start and end times you choose during setup are saved with your rotation and used across the app.</span><span data-ar>وقت البداية والنهاية اللي تختاره أثناء الإعداد ينحفظ مع الروتيشن ويُستخدم في جميع أجزاء التطبيق.</span></div></div>
+  <div class="item helpItem"><div class="itemTitle rtl-text"><span data-en>How does Cloud Sync work?</span><span data-ar>كيف تعمل المزامنة السحابية؟</span></div><div class="itemBody rtl-text"><span data-en>When signed in, Shiftly can sync your app data to your account so it can be restored later.</span><span data-ar>عند تسجيل الدخول يقدر Shiftly يزامن بيانات التطبيق مع حسابك حتى تقدر تستعيدها لاحقًا.</span></div></div>
+  <div class="item helpItem"><div class="itemTitle rtl-text"><span data-en>Why am I not receiving notifications?</span><span data-ar>ليش ما توصلني التنبيهات؟</span></div><div class="itemBody rtl-text"><span data-en>Make sure Shiftly notifications are allowed in iPhone Settings and enabled inside the app.</span><span data-ar>تأكد أن تنبيهات Shiftly مسموحة من إعدادات الآيفون ومفعلة داخل التطبيق.</span></div></div>
+  <div class="item helpItem"><div class="itemTitle rtl-text"><span data-en>How do I delete my account?</span><span data-ar>كيف أحذف حسابي؟</span></div><div class="itemBody rtl-text"><span data-en>Open Profile and choose Delete Account. Shiftly will ask for confirmation before permanent deletion.</span><span data-ar>افتح الملف الشخصي واختر حذف الحساب. بيطلب منك Shiftly التأكيد قبل الحذف النهائي.</span></div></div>
+</div>
+<div class="sectionLabel"><span data-en>PRIVACY</span><span data-ar>الخصوصية</span></div>
+<div class="card">
+  <a class="policyRow" href="../privacy-policy/"><div class="policyText"><div class="itemTitle rtl-text"><span data-en>Privacy Policy</span><span data-ar>سياسة الخصوصية</span></div><div class="itemBody rtl-text"><span data-en>Read how Shiftly handles your information</span><span data-ar>اقرأ كيف يتعامل Shiftly مع معلوماتك</span></div></div><div class="chevron"><span data-en>›</span><span data-ar>‹</span></div></a>
+</div>
+<div class="supportVersion rtl-text"><span data-en>Shiftly · Version 1.0.0</span><span data-ar>Shiftly · الإصدار ١.٠.٠</span></div>
+</main>
+</div>
+<script src="../app.js"></script>
+</body>
+</html>
