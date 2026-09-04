@@ -1,10 +1,18 @@
-
 (function () {
   const params = new URLSearchParams(location.search);
   const forced = params.get('lang');
-  const saved = localStorage.getItem('shiftly_web_lang');
 
+  function safeGet(key) {
+    try { return localStorage.getItem(key); } catch (_) { return null; }
+  }
+
+  function safeSet(key, value) {
+    try { localStorage.setItem(key, value); } catch (_) {}
+  }
+
+  const saved = safeGet('shiftly_web_lang');
   let lang;
+
   if (forced === 'ar' || forced === 'en') {
     lang = forced;
   } else if (saved === 'ar' || saved === 'en') {
@@ -31,43 +39,31 @@
     btn.style.cursor = 'pointer';
   }
 
-  function installLanguageButton() {
-    document.querySelectorAll('.headerSpacer').forEach(function (spacer) {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.setAttribute('data-lang-toggle', 'true');
-      btn.addEventListener('click', function () {
-        apply(document.documentElement.dataset.lang === 'ar' ? 'en' : 'ar');
-      });
-      btn.addEventListener('pointerdown', function () {
-        btn.style.opacity = '0.7';
-      });
-      btn.addEventListener('pointerup', function () {
-        btn.style.opacity = '1';
-      });
-      btn.addEventListener('pointercancel', function () {
-        btn.style.opacity = '1';
-      });
-      styleLanguageButton(btn);
-      spacer.replaceWith(btn);
-    });
-  }
-
   function apply(next) {
     document.documentElement.dataset.lang = next;
     document.documentElement.lang = next;
     document.documentElement.dir = next === 'ar' ? 'rtl' : 'ltr';
-    localStorage.setItem('shiftly_web_lang', next);
+    safeSet('shiftly_web_lang', next);
 
     document.querySelectorAll('[data-lang-toggle]').forEach(function (btn) {
+      styleLanguageButton(btn);
       btn.textContent = next === 'ar' ? 'EN' : 'ع';
-      btn.setAttribute(
-        'aria-label',
-        next === 'ar' ? 'Switch to English' : 'التبديل إلى العربية'
-      );
+      btn.setAttribute('aria-label', next === 'ar' ? 'Switch to English' : 'التبديل إلى العربية');
     });
   }
 
-  installLanguageButton();
+  window.toggleLanguage = function () {
+    apply(document.documentElement.dataset.lang === 'ar' ? 'en' : 'ar');
+  };
+
+  document.querySelectorAll('.headerSpacer').forEach(function (spacer) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.setAttribute('data-lang-toggle', 'true');
+    btn.addEventListener('click', window.toggleLanguage);
+    styleLanguageButton(btn);
+    spacer.replaceWith(btn);
+  });
+
   apply(lang);
 })();
